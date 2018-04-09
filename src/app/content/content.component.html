@@ -1,37 +1,19 @@
-<div class="row">
-  <div class="col-md-4 col-sm-4">
+
+  <div class="">
      <h2 class="text-center head">Add New Blog</h2>
     <form #blogform="ngForm" ngNativeValidate>
     <div class="form-group">
       <label for="title">Title:</label>
-      <input type="text" class="form-control" required [(ngModel)]=blog.title id="title" placeholder="Enter Title" name="title">
+      <input type="text" class="form-control" required ngModel id="title" placeholder="Enter Title" name="title">
     </div>
     <div class="form-group">
       <label for="des">Description:</label>
-      <input type="text" class="form-control" required [(ngModel)]=blog.description id="des" placeholder="Enter Description" name="description" >
+      <input type="text" class="form-control" required ngModel id="des" placeholder="Enter Description" name="description" >
     </div>
-    <button *ngIf="edit !== true else elseblock" (click)="blogData(blogform)" type="submit" class="btn btn-primary">Save</button>
-    <ng-template #elseblock>
+    <button  (click)="blogData(blogform)" type="submit" class="btn btn-primary">Save</button>
+    <!-- <ng-template #elseblock>
        <button type="submit" (click)="editData(blogform)" class="btn btn-success">Update</button>
        <button (click)="cancelUpdate()" class="btn btn-warning">Cancel</button>
-    </ng-template>
+    </ng-template> -->
   </form>
   </div>
-  <div class="col-md-8 col-sm-8">
-    <h2 class="text-center head">All Published Blogs</h2>
-  <div class="row">
-       <div class="col-md-6" *ngFor="let blog of blogs">           
-         <div class="card">
-            <div class="opration">
-               <button class="btn btn-success" (click)="getBlog(blog._id)"><i class="fa fa-pencil" aria-hidden="true"></i></button >
-               <button class="btn btn-danger" (click)="deleteBlog(blog._id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-              </div>
-            <div class="card-body">
-              <h3 class="card-title">{{blog.title}}</h3>
-               <p class="card-text">{{blog.description}}</p>
-            </div>
-          </div>
-      </div>
-  </div>
-  </div>
- </div>

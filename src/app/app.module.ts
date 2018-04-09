@@ -5,13 +5,16 @@ import { AppComponent } from './app.component';
 import { BlogserviceService } from './blogservice.service';
 import { FormsModule }   from '@angular/forms';
 import { AppRoutingModule , RoutingComponents} from './app-routing.module';
+import { HeaderComponent } from './header/header.component';
+
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    RoutingComponents
+    RoutingComponents,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

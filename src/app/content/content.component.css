@@ -1,22 +1,2 @@
-.card-title {
-	text-transform: capitalize;
-}
-.card {
-	margin-bottom: 10px;
-	}
-.opration {
-    position: absolute;
-    right: 5px;
-    top: 2px;
-    display: none;
-}
-/*.opration .btn {
-  margin-bottom: 2px;
-}*/
-.card:hover .opration{
-	display: block;
-}
-h2.text-center.head {
-    margin-bottom: 15px;
-}
+
 	
